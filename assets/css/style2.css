@@ -403,8 +403,9 @@ body {
 }
 
 body {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#ff7125));
-    background: linear-gradient(to top, #ffdeb8e0, #ff8746);
+    /* background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#ff7125));
+    background: linear-gradient(to top, #ffdeb8e0, #ff8746); */
+    background: aliceblue;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
@@ -423,11 +424,19 @@ body {
     -webkit-box-pack: center;
     justify-content: center;
     /* font-family: Ubuntu; */
-    font-size: 4rem;
     font-family: 'Montserrat', sans-serif;
-    color: #fff;
+    color: rgb(31, 31, 31);
 }
+#content h1{
+    font-size: 5rem !important;
 
+}
+@media(max-width:768px){
+    #content h1{
+        font-size: 3rem !important;
+    
+    }
+}
 #content h1,
 #content p {
     margin: -8rem 0 0 1rem;
