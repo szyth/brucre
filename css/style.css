@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+
+/* brucre hex #ff5e06 */
+
+
+.nav-wrapper {
+  height: 5rem;
+}
+
+.custom_theme {
+  background: #1b1b1b;
+}
+
+.brand-logo {
+  font-family: 'Montserrat', sans-serif !important;
+}
