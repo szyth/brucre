@@ -9,81 +9,124 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,700' rel='stylesheet' type='text/css'>
+  <!-- <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" /> -->
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link rel="stylesheet" type="text/css" href="css/slider.css" />
+  <link rel="stylesheet" type="text/css" href="css/navbar.css" />
 </head>
 
 <body>
-
-  <ul id="dropdown1" class="dropdown-content ">
-    <li><a href="#!">one</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">three</a></li>
-  </ul>
-  <ul id="dropdown2" class="dropdown-content">
-    <li><a href="#!">one</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">three</a></li>
-  </ul>
-  <nav class="custom_theme transparent z-depth-0" role="navigation">
-    <div class="nav-wrapper container navbar-fixed"><a id="logo-container" href="#" class="brand-logo">BRUCRE.</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Work</a></li>
-        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Services<i
-              class="material-icons right">arrow_drop_down</i></a></li>
-
-        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">About Us<i
-              class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a href="#">Contact Us</a></li>
+  <header>
+    <a id="cd-logo" href="#0">
+     <h1 class="brand-logo">brucre.</h1>
+    </a>
+    
+    <nav id="cd-top-nav">
+      <ul>
+        <li><a href="#0">Project</a></li>
+        <li><a href="#0">Team</a></li>
       </ul>
+    </nav>
+    <a id="cd-menu-trigger" href="#0"><span class="cd-menu-text">Menu</span><span class="cd-menu-icon"></span></a>
+  </header>
+  <main class="cd-main-content">
 
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
+    <!-- put your content here -->
+    <div>
+      <ul class="cb-slideshow">
+        <li><span>Image 01</span>
+          <div>
+            <h3>ELEGANT</h3>
+          </div>
+        </li>
+        <li><span>Image 02</span>
+          <div>
+            <h3>QUIETUDE</h3>
+          </div>
+        </li>
+        <li><span>Image 03</span>
+          <div>
+            <h3>BALANCE</h3>
+          </div>
+        </li>
+        <li><span>Image 04</span>
+          <div>
+            <h3>EQUANIMITY</h3>
+          </div>
+        </li>
+
       </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
+
+
+  </main> <!-- cd-main-content -->
+
+  <nav id="cd-lateral-nav">
+    <ul class="cd-navigation">
+      <li class="item-has-children">
+        <a href="#0">Services</a>
+        <ul class="sub-menu">
+          <li><a href="#0">Brand</a></li>
+          <li><a href="#0">Web Apps</a></li>
+          <li><a href="#0">Mobile Apps</a></li>
+        </ul>
+      </li> <!-- item-has-children -->
+
+      <li class="item-has-children">
+        <a href="#0">Products</a>
+        <ul class="sub-menu">
+          <li><a href="#0">Product 1</a></li>
+          <li><a href="#0">Product 2</a></li>
+          <li><a href="#0">Product 3</a></li>
+          <li><a href="#0">Product 4</a></li>
+          <li><a href="#0">Product 5</a></li>
+        </ul>
+      </li> <!-- item-has-children -->
+
+      <li class="item-has-children">
+        <a href="#0">Stockists</a>
+        <ul class="sub-menu">
+          <li><a href="#0">London</a></li>
+          <li><a href="#0">New York</a></li>
+          <li><a href="#0">Milan</a></li>
+          <li><a href="#0">Paris</a></li>
+        </ul>
+      </li> <!-- item-has-children -->
+    </ul> <!-- cd-navigation -->
+
+    <ul class="cd-navigation cd-single-item-wrapper">
+      <li><a href="#0">Projects</a></li>
+      <li><a href="#0">Team</a></li>
+      <li><a href="#0">Register</a></li>
+      <li><a href="#0">Pricing</a></li>
+      <li><a href="#0">Support</a></li>
+    </ul> <!-- cd-single-item-wrapper -->
+
+    <ul class="cd-navigation cd-single-item-wrapper">
+      <li><a class="current" href="#0">Journal</a></li>
+      <li><a href="#0">FAQ</a></li>
+      <li><a href="#0">Terms &amp; Conditions</a></li>
+      <li><a href="#0">Careers</a></li>
+      <li><a href="#0">Students</a></li>
+    </ul> <!-- cd-single-item-wrapper -->
+
+    <div class="cd-navigation socials">
+      <a class="cd-twitter cd-img-replace" href="#0">Twitter</a>
+      <a class="cd-github cd-img-replace" href="#0">Git Hub</a>
+      <a class="cd-facebook cd-img-replace" href="#0">Facebook</a>
+      <a class="cd-google cd-img-replace" href="#0">Google Plus</a>
+    </div> <!-- socials -->
   </nav>
 
-  <div style="">
-    <ul class="cb-slideshow">
-      <li><span>Image 01</span>
-        <div>
-          <h3>re·lax·a·tion</h3>
-        </div>
-      </li>
-      <li><span>Image 02</span>
-        <div>
-          <h3>qui·e·tude</h3>
-        </div>
-      </li>
-      <li><span>Image 03</span>
-        <div>
-          <h3>bal·ance</h3>
-        </div>
-      </li>
-      <li><span>Image 04</span>
-        <div>
-          <h3>e·qua·nim·i·ty</h3>
-        </div>
-      </li>
-
-    </ul>
-  </div>
 
 
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- <script src="js/materialize.js"></script> -->
   <script src="js/init.js"></script>
 
 </body>
