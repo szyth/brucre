@@ -65,3 +65,31 @@ jQuery(document).ready(function ($) {
         .slideUp(200);
     });
 });
+
+// PROJECTS
+/* Demo purposes only */
+var snippet = [].slice.call(document.querySelectorAll(".hover"));
+if (snippet.length) {
+  snippet.forEach(function (snippet) {
+    snippet.addEventListener("mouseout", function (event) {
+      if (event.target.parentNode.tagName === "figure") {
+        event.target.parentNode.classList.remove("hover");
+      } else {
+        event.target.parentNode.classList.remove("hover");
+      }
+    });
+  });
+}
+
+var logoElement = $("footer .logo");
+
+$(window).scroll(function () {
+  if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+    $(logoElement).addClass("show");
+  } else if (
+    $(logoElement).hasClass("show") &&
+    $(window).scrollTop() + $(window).height() > $(document).height() - 150
+  ) {
+    $(logoElement).removeClass("show");
+  }
+});
