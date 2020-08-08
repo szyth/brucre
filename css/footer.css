@@ -18,6 +18,7 @@ footer {
     padding: 0 !important;
     height: 70px;
     background-color: #ff5e06;
+    transform: translateY(2px);
 }
 
 footer .copyright {
