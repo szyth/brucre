@@ -8,14 +8,19 @@
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;900&display=swap" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <!-- <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" /> -->
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/contact.css" />
     <link rel="stylesheet" type="text/css" href="css/aboutUs.css" />
+    <link rel="stylesheet" type="text/css" href="css/team.css" />
+    <link rel="stylesheet" type="text/css" href="css/slider.css" />
+    <link rel="stylesheet" type="text/css" href="css/projects-index.css" />
     <link rel="stylesheet" type="text/css" href="css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
 
 </head>
 
@@ -27,7 +32,7 @@
 
         <nav id="cd-top-nav">
             <ul>
-                <li><a href="project.html">Project</a></li>
+                <li><a href="index.html#project">Project</a></li>
                 <li><a href="team.html">Team</a></li>
             </ul>
         </nav>
@@ -58,23 +63,69 @@
 
             </div>
             <div class="section-right ">
-               <!--Image Column-->
-               <div class="image-column">
-                <div class="inner-column">
-                    <div class="image">
-                        <img src="https://i.ibb.co/vQbkKj7/about.jpg" alt="">
-                        <div class="overlay-box">
-                            <div class="year-box"><span class="number">1</span>Year <br> Experience <br> Working</div>
+                <!--Image Column-->
+                <div class="image-column">
+                    <div class="inner-column">
+                        <div class="image">
+                            <img src="https://i.ibb.co/vQbkKj7/about.jpg" alt="">
+                            <div class="overlay-box">
+                                <div class="year-box"><span class="number">1</span>Year <br> Experience <br> Working
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
+
 
 
             </div>
         </section>
+        <div class="finished"><i class="fa fa-check"></i> Message Sent</div>
+        <div class="table" id="contact">
+            <div class="table-cell">
+                <div class="modal">
+                    <div class="frontside">
+                        <h1>Contact</h1>
+                        <div class="row">
+                            <div class="col twitter">
+                                <h2><i class="fa fa-twitter"></i></h2>
+                                Twitter
+                            </div></a>
+                            <div class="col dribbble">
+                                <h2><i class="fa fa-behance"></i></h2>Behance
+                            </div>
+                            <div class="col message">
+                                <h2><i class="fa fa-envelope-o"></i></h2>Message
+                            </div>
+                        </div>
 
+
+                    </div>
+                    <div class="backside">
+                        <div class="close"></div>
+                        <label>Name<input id="name" type="text" /></label>
+                        <label>Email Address<input type="email" /></label>
+                        <label>Message<textarea></textarea></label>
+                        <button>Send it!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+
+        <footer>
+            <div class="copyright">
+                <p>&copy 2020 - brucre.</p>
+            </div>
+            <div class="social">
+                <a href="#" class="support">Contact Us</a>
+                <a href="#" class="face">f</a>
+                <a href="#" class="tweet">t</a>
+                <a href="#" class="linked">in</a>
+            </div>
+        </footer>
+        <!-- END - FOOTER -->
     </main> <!-- cd-main-content -->
 
     <nav id="cd-lateral-nav">
@@ -94,17 +145,15 @@
 
         <ul class="cd-navigation cd-single-item-wrapper">
             <li><a class="current" href="index.html">Home</a></li>
-            <li><a href="project.html">Projects</a></li>
+            <li><a href="index.html#project">Projects</a></li>
             <li><a href="#0">Pricing</a></li>
-            <li><a href="#0">Support</a></li>
         </ul> <!-- cd-single-item-wrapper -->
 
         <ul class="cd-navigation cd-single-item-wrapper">
-            <li><a href="aboutUs.html">About Us</a></li>
             <li><a href="team.html">Team</a></li>
-            <li><a href="#0">Terms &amp; Conditions</a></li>
-            <li><a href="#0">Careers</a></li>
-            <li><a href="#0">Students</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="aboutUs.html#contact">Contact Us</a></li>
+
         </ul> <!-- cd-single-item-wrapper -->
 
         <div class="cd-navigation socials">
@@ -115,21 +164,6 @@
         </div> <!-- socials -->
     </nav>
 
-
-    <!-- FOOTER -->
-
-    <footer>
-        <div class="copyright">
-            <p>&copy 2020 - brucre.</p>
-        </div>
-        <div class="social">
-            <a href="#" class="support">Contact Us</a>
-            <a href="#" class="face">f</a>
-            <a href="#" class="tweet">t</a>
-            <a href="#" class="linked">in</a>
-        </div>
-    </footer>
-    <!-- END - FOOTER -->
 
     <!--  Scripts-->
 

@@ -93,3 +93,26 @@ $(window).scroll(function () {
     $(logoElement).removeClass("show");
   }
 });
+
+//contact
+// ----- On render -----
+$(function () {});
+
+$(".message").click(function () {
+  $(".modal").addClass("flipped");
+  setTimeout(function () {
+    $("#name").focus();
+  }, 500);
+});
+$("button").click(function () {
+  TweenMax.to($(".modal"), 0.5, {
+    y: -1000,
+    ease: Power3.easeIn,
+    onComplete: function () {
+      $(".finished").addClass("show");
+    },
+  });
+});
+$(".close").click(function () {
+  $(".modal").removeClass("flipped");
+});
