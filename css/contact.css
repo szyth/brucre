@@ -120,12 +120,13 @@ a {
 
 #content #right #social {
     display: table;
-    width: 100%;
+    width: 120px;
+    font-size: 25px;
 }
 
 #content #right .social {
     display: table-cell;
-    text-align: center;
+    text-align: left;
 }
 
 #content #right form {
