@@ -47,6 +47,7 @@ a {
 
 #browser-bar p {
     text-align: center;
+    transform: translateX(-30px);
 }
 
 #browser-bar .circles {
