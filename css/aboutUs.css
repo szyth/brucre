@@ -1,5 +1,6 @@
 .contain {
     /* margin: 100px auto; */
+    /* margin-bottom: 1000px; */
     padding: 5% 10%;
 }
 
@@ -105,7 +106,7 @@
     }
 
     .image-column {
-        padding: 0;
+        /* padding: 0; */
     }
 
 }
