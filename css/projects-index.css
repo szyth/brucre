@@ -7,9 +7,13 @@
     font-size: 3rem;
     color: #000;
 }
+.container-card{
+    padding: 1%;
+}
 .snip1580 {
     font-family: 'Raleway', Arial, sans-serif;
     position: relative;
+    /* padding: 50px; */
     display: inline-block;
     overflow: hidden;
     margin: 0.1rem;
