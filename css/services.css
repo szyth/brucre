@@ -1,0 +1,48 @@
+#services {
+    padding: 5%;
+}
+
+#services .services-title {
+    font-size: 3rem !important;
+    margin-bottom: 20px;
+    color: #e65608;
+
+}
+
+#services img {
+    width: 100%;
+    height: auto;
+}
+
+.services_block {
+    transform: translate(-100px, 20px);
+}
+
+.service_name {
+    padding: 3%;
+    background-color: rgb(26, 26, 26);
+}
+
+.service_name h1 {
+    text-transform: uppercase;
+    color: #e9e9e9;
+    font-size: 2rem;
+}
+
+.service_body {
+    padding: 3%;
+    background-color: rgb(236, 236, 236);
+}
+
+.service_body p {
+    line-height: 1.2rem;
+    font-weight: 300;
+    color: #1b1b1b;
+    font-size: 1.1rem;
+}
+
+@media all and (max-width: 780px) {
+    .services_block {
+        transform: translate(0, 0);
+    }
+}
