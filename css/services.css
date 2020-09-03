@@ -1,60 +1,46 @@
-#services {
-    padding: 2% 5%;
-    background-color: #ece9e9;
-    z-index: -2;
-}
-
-#services .services-title {
-    font-size: 3rem !important;
-    color: #e65608;
-
-}
-
-.service_image {
-    z-index: -1;
-    width: 100%;
+/* INDEX Services */
+#service-index {
     height: auto;
 }
 
-
-.service_name {
-    position: relative;
-    z-index: 1;
-    transform: translate(-30px, 40px);
-    padding: 3%;
-    background-color: rgb(26, 26, 26);
+.service-title {
+    padding: 3.5em;
+    text-align: center;
+    background-color: #5a5a5a;
 }
 
-.service_name h1 {
-    text-transform: uppercase;
-    color: #e9e9e9;
-    font-size: 2rem;
+.service-title h1 {
+    font-size: 2.5rem !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 900;
+    color: #f0f0f0;
+
 }
 
-.service_body {
-    transform: translate(30px, -40px);
-    padding: 5%;
-    background-color: rgb(255, 255, 255);
+#service-index .row .col {
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
-.service_body p {
-    line-height: 1.5rem;
-    font-weight: 300;
-    color: #1b1b1b;
-    font-size: 1rem;
+#service-index .service_body {
+    padding: 15%;
 }
 
-@media all and (max-width: 780px) {
-    #services .services-title {
-        font-size: 1.6rem !important;
-    
-    }
-    .service_name h1 {
-        font-size: 1.4rem;
-    }
-
-    .service_body p {
-        line-height: 1.2rem;
-        font-size: 0.7rem;
-    }
+#service-index .service_body h1 {
+    font-size: 3em;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600;
 }
+#service-index .service_body p {
+    margin-top: 20px;
+}
+
+.img-fit img {
+    width: 100% !important;
+    height:80vh !important;
+    object-fit: cover;
+}
+
+
+
+/* INDEX Services - end */

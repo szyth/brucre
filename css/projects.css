@@ -1,13 +1,14 @@
 .project-title {
-    padding: 2% 5%;
+    padding: 3.5em;
     text-align: center;
-    background-color: rgb(54, 54, 54);
+    background-color: #f0f0f0;
 }
 
 .project-title h1 {
-    font-size: 4rem !important;
-    margin-bottom: 20px;
-    color: #f0f0f0;
+    font-size: 2.5rem !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 900;
+    color: #5a5a5a;
 
 }
 
@@ -35,9 +36,6 @@
 }
 
 
-.card-content {
-    height: 28vh !important;
-}
 
 .card .card-image img {
     width: 100%;
@@ -45,13 +43,28 @@
     object-fit: cover;
 }
 
-.card-action {
-    height: 10vh !important;
-    overflow: hidden;
+.card .card-content {
+color: #444;
 }
 
-.card-action a {
-    font-size: 0.9em !important;
+
+.project_loadmore{
+    text-align: center;
+    padding-top: 3em;
+    padding-bottom: 5em;
 }
+
+.project_loadmore a{
+    padding: 2%;
+    font-weight: 600;
+    font-size: 0.8em;
+    font-family: 'Montserrat', sans-serif !important;
+    border: solid rgb(68, 68, 68) 2px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(53, 53, 53);
+}
+
+
+
 
 @media screen and (min-width: 601px) and (max-width: 992px) {}

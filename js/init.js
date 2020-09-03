@@ -96,8 +96,8 @@ $(window).scroll(function () {
 
 //contact
 
-
 //parallax
-$(document).ready(function(){
-  $('.parallax').parallax();
+$(document).ready(function () {
+  $(".parallax").parallax();
 });
+
