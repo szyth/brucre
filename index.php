@@ -56,9 +56,18 @@
 
 
 
+<div class="parallax-container valign-wrapper">
+    <div class="row parallax-body">
+        <h5 class="parallax-header col s12">A modern responsive front-end framework based on Material Design</h5>
+    </div>
+    <div class="parallax"><img src="img/4.jpg" alt="Unsplashed background img 2"></div>
+</div>
 
 <!-- PROJECTS -->
-<div class="row">
+
+
+<div class="row project-title">
+    <h1 class="">Projects</h1>
 
 </div>
 <div class="row">
@@ -88,9 +97,7 @@
                     <a href="#"><?php echo $row['location'] ?></a>
                 </div>
             </div>
-
-
-        </div>
+        </div>   
         <div class="col s12 m4 l3">
             <div class="card">
                 <a href="">
@@ -110,9 +117,8 @@
                     <a href="#"><?php echo $row['location'] ?></a>
                 </div>
             </div>
-
-
         </div>
+
     <?php } ?>
 </div>
 

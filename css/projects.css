@@ -1,0 +1,57 @@
+.project-title {
+    padding: 2% 5%;
+    text-align: center;
+    background-color: rgb(54, 54, 54);
+}
+
+.project-title h1 {
+    font-size: 4rem !important;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+
+}
+
+.parallax-body {
+    background-color: #242424b6;
+    padding: 2%;
+}
+
+.parallax-header {
+    color: rgb(238, 238, 238);
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 768px) {
+
+    .project-title h1 {
+        font-size: 2rem !important;
+
+    }
+
+    .parallax-header {
+        font-size: 0.7em;
+    }
+
+}
+
+
+.card-content {
+    height: 28vh !important;
+}
+
+.card .card-image img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.card-action {
+    height: 10vh !important;
+    overflow: hidden;
+}
+
+.card-action a {
+    font-size: 0.9em !important;
+}
+
+@media screen and (min-width: 601px) and (max-width: 992px) {}
