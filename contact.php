@@ -49,13 +49,11 @@ if (isset($_POST['submit'])) {
             <p>Connect</p>
             <br>
             <div id='social'>
-                <a class='social fa fa-facebook'>
+                <a href="https://www.facebook.com/Brucre-Collaboration-109421650808666/" class='social fa fa-facebook'>
                 </a>
-                <a class='social fa fa-twitter'>
+                <a href="https://www.instagram.com/brucre_collab/?hl=en" class='social fa fa-linkedin'>
                 </a>
-                <a class='social fa fa-behance-square'>
-                </a>
-                <a class='social fa fa-instagram'>
+                <a href="https://www.linkedin.com/company/brucre" class='social fa fa-instagram'>
                 </a>
             </div>
             <form method="POST">

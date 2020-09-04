@@ -17,7 +17,7 @@
   </ul> -->
   <ul class="cd-navigation cd-single-item-wrapper">
     <li><a class="current" href="index.php">Home</a></li>
-    <li><a href="services.html">Services</a></li>
+    <li><a href="services.php">Services</a></li>
     <li><a href="all_projects.php">All Projects</a></li>
   </ul> <!-- cd-single-item-wrapper -->
 

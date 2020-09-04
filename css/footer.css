@@ -1,5 +1,3 @@
-
-
 footer {
   width: 100%;
   display: inline-block;
@@ -7,15 +5,18 @@ footer {
   height: 70px;
   background-color: #ff5e06;
 }
+
 footer .copyright {
   width: 50%;
   float: left;
 }
+
 @media (max-width: 600px) {
   footer .copyright {
     width: 100%;
   }
 }
+
 footer .copyright p {
   padding-left: 10%;
   color: white;
@@ -24,21 +25,25 @@ footer .copyright p {
   text-transform: capitalize;
   letter-spacing: 1px;
 }
+
 @media (max-width: 600px) {
   footer .copyright p {
     text-align: center;
     padding: 0;
   }
 }
+
 footer .social {
   width: 50%;
   float: right;
 }
+
 @media (max-width: 600px) {
   footer .social {
     width: 100%;
   }
 }
+
 footer .social a {
   float: left;
   line-height: 70px;
@@ -51,6 +56,7 @@ footer .social a {
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
 }
+
 footer .social a:hover {
   background-color: #222;
   -moz-transition: all, 0.3s;
@@ -71,8 +77,12 @@ footer .social a:hover {
   width: 20%;
 }
 
-.tweet {
-  background-color: #3DACDD;
+.insta {
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
   font-size: 1.2em;
   width: 20%;
 }
