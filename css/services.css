@@ -31,16 +31,53 @@
     font-family: 'Montserrat', sans-serif !important;
     font-weight: 600;
 }
+
 #service-index .service_body p {
+    color: rgb(27, 27, 27);
+    font-size: 1em;
+    line-height: 1.5;
     margin-top: 20px;
+}
+
+.service_project_mgmt {
+    padding-bottom: 0 !important;
+
+}
+
+.service_project_mgmt h1 {
+    font-size: 2.1em !important;
+
 }
 
 .img-fit img {
     width: 100% !important;
-    height:80vh !important;
+    height: 80vh !important;
     object-fit: cover;
 }
 
+.show-on-large {
+    display: block;
+}
 
+.show-on-small {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .service_project_mgmt {
+        padding-bottom: 15% !important;
+
+    }
+
+    .show-on-large {
+        display: none;
+    }
+
+    .show-on-small {
+        display: block;
+    }
+
+
+}
 
 /* INDEX Services - end */

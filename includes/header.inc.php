@@ -1,3 +1,5 @@
+<?php require('includes/connection.inc.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
