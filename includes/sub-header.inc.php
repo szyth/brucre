@@ -23,7 +23,7 @@
 
   <ul class="cd-navigation cd-single-item-wrapper">
     <li><a href="aboutUs.php">About Us</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="contact.php">Contact Us</a></li>
 
   </ul> <!-- cd-single-item-wrapper -->
 
