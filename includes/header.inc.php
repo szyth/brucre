@@ -18,14 +18,14 @@
   <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
   <!-- <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" /> -->
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <link rel="stylesheet" type="text/css" href="css/contact.css" />
-  <link rel="stylesheet" type="text/css" href="css/aboutUs.css" />
-  <link rel="stylesheet" type="text/css" href="css/slider.css" />
-  <link rel="stylesheet" type="text/css" href="css/projects.css" />
-  <link rel="stylesheet" type="text/css" href="css/footer.css" />
-  <link rel="stylesheet" type="text/css" href="css/navbar.css" />
-  <link rel="stylesheet" type="text/css" href="css/services.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="contact.css" />
+  <link rel="stylesheet" type="text/css" href="aboutUs.css" />
+  <link rel="stylesheet" type="text/css" href="slider.css" />
+  <link rel="stylesheet" type="text/css" href="projects.css" />
+  <link rel="stylesheet" type="text/css" href="footer.css" />
+  <link rel="stylesheet" type="text/css" href="navbar.css" />
+  <link rel="stylesheet" type="text/css" href="services.css" />
 
 </head>
 

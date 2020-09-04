@@ -23,6 +23,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .project-title {
+        padding: 2em;
+    }
 
     .project-title h1 {
         font-size: 2rem !important;
@@ -84,7 +87,7 @@
     font-weight: 100;
 }
 
-#project_details .parallax-container{
+#project_details .parallax-container {
     height: 30vw;
 }
 
@@ -120,16 +123,28 @@
     padding: 5%;
     padding-top: 0;
 }
+
 #project_details .details p i {
     color: #ff5e06;
     margin-right: 5px;
 }
-@media screen and (max-width: 601px) {
+
+
+#carousel-container {
+    padding: 5em;
+    padding-top: 0;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
     #project_details .project-title {
         padding: 2.9em 1em;
     }
+
     #project_details .project-title a {
         font-size: 2.5em;
     }
-    
+    #carousel-container {
+        padding: 1em;
+    }
 }

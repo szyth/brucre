@@ -64,6 +64,23 @@
 }
 
 @media screen and (max-width: 992px) {
+    .service-title {
+        padding: 2em;
+    }
+
+    .service-title h1 {
+        font-size: 2rem !important;
+
+    }
+
+    #service-index .service_body {
+        padding: 10%;
+    }
+
+    #service-index .service_body h1 {
+        font-size: 1em;
+    }
+
     .service_project_mgmt {
         padding-bottom: 15% !important;
 

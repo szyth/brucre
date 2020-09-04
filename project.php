@@ -51,7 +51,7 @@ $row = mysqli_fetch_assoc($res);
 
 </div>
 
-<div style="padding: 5em;padding-top:0;height: auto;">
+<div id="carousel-container">
     <div class="carousel carousel-slider">
         <?php
         $res = mysqli_query($con, " SELECT * FROM projects");
