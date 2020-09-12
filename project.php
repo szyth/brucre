@@ -54,10 +54,10 @@ $row = mysqli_fetch_assoc($res);
 <div id="carousel-container">
     <div class="carousel carousel-slider">
         <?php
-        $res = mysqli_query($con, " SELECT * FROM projects");
+        $res = mysqli_query($con, " SELECT * FROM projects WHERE status='1'");
         while ($row = mysqli_fetch_assoc($res)) {
         ?>
-            <a class="carousel-item" href="#one!"><img src="img/projects/<?php echo $row['image'] ?>"></a>
+            <a class="carousel-item"><img src="img/projects/<?php echo $row['image'] ?>"></a>
         <?php } ?>
     </div>
 </div>

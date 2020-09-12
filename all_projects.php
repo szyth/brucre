@@ -8,7 +8,7 @@
 <div class="row">
     
     <?php
-    $res = mysqli_query($con, " SELECT * FROM projects");
+    $res = mysqli_query($con, " SELECT * FROM projects  WHERE status='1'");
     while ($row = mysqli_fetch_assoc($res)) {
     ?>
 

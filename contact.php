@@ -6,6 +6,8 @@ if (isset($_POST['submit'])) {
     $email = mysqli_real_escape_string($con, $_POST['email']);
     $subject = mysqli_real_escape_string($con, $_POST['subject']);
     $message = mysqli_real_escape_string($con, $_POST['message']);
+    date_default_timezone_set('Asia/Kolkata');
+    $added_on = date('Y-m-d h:i:s');
 
 
     if (!empty($name) && !empty($email) && !empty($subject) && !empty($message)) {
@@ -13,7 +15,7 @@ if (isset($_POST['submit'])) {
 
 
 
-        $sql = "INSERT INTO contact_us(name,email,subject,message) VALUES('$name','$email','$subject','$message')";
+        $sql = "INSERT INTO contact_us(name,email,subject,message,added_on) VALUES('$name','$email','$subject','$message','$added_on')";
         $res = mysqli_query($con, $sql);
 
 
@@ -51,9 +53,9 @@ if (isset($_POST['submit'])) {
             <div id='social'>
                 <a href="https://www.facebook.com/Brucre-Collaboration-109421650808666/" class='social fa fa-facebook'>
                 </a>
-                <a href="https://www.instagram.com/brucre_collab/?hl=en" class='social fa fa-linkedin'>
+                <a href="https://www.linkedin.com/company/brucre" class='social fa fa-linkedin'>
                 </a>
-                <a href="https://www.linkedin.com/company/brucre" class='social fa fa-instagram'>
+                <a href="https://www.instagram.com/brucre_collab/?hl=en" class='social fa fa-instagram'>
                 </a>
             </div>
             <form method="POST">

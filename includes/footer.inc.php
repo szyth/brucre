@@ -2,7 +2,8 @@
 
   <footer>
     <div class="copyright">
-      <p>&copy 2020 - brucre.</p>
+    <a href="admin/login.php"><p>&copy 2020 - brucre.</p></a>
+      
     </div>
     <div class="social">
       <a href="contact.php" class="support">Contact Us</a>
@@ -16,8 +17,8 @@
   <!--  Scripts-->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+  <script src="../materialize.js"></script>
+  <script src="../init.js"></script>
   <script></script>
   </body>
 
