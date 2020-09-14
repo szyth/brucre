@@ -20,11 +20,11 @@ if (isset($_SESSION['ADMIN_LOGIN']) && $_SESSION['ADMIN_LOGIN'] != '') {
    <title>Admin Panel - OBB</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-     <!-- favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
-  <link rel="manifest" href="../img/favicon/site.webmanifest">
+   <!-- favicon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+   <link rel="manifest" href="../img/favicon/site.webmanifest">
 
 
    <link rel="stylesheet" href="assets/css/normalize.css">
@@ -49,6 +49,9 @@ if (isset($_SESSION['ADMIN_LOGIN']) && $_SESSION['ADMIN_LOGIN'] != '') {
                </li>
                <li class="menu-item-has-children dropdown">
                   <a href="contact_us.php"> Contact Us</a>
+               </li>
+               <li class="menu-item-has-children dropdown">
+                  <a href="career.php">Career Form</a>
                </li>
             </ul>
          </div>

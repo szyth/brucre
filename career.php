@@ -4,18 +4,20 @@ if (isset($_POST['submit'])) {
 
     $name = mysqli_real_escape_string($con, $_POST['name']);
     $email = mysqli_real_escape_string($con, $_POST['email']);
-    $subject = mysqli_real_escape_string($con, $_POST['subject']);
-    $message = mysqli_real_escape_string($con, $_POST['message']);
+    $number = mysqli_real_escape_string($con, $_POST['number']);
+    $position = mysqli_real_escape_string($con, $_POST['position']);
+    $introduction = mysqli_real_escape_string($con, $_POST['introduction']);
     date_default_timezone_set('Asia/Kolkata');
     $added_on = date('Y-m-d h:i:s');
 
 
-    if (!empty($name) && !empty($email) && !empty($subject) && !empty($message)) {
+    if (!empty($name)) {
 
 
+        $cv = rand(111111111, 999999999) . '_' . $_FILES['cv']['name'];
+        move_uploaded_file($_FILES['cv']['tmp_name'], "img/cv/" . $cv);
 
-
-        $sql = "INSERT INTO career(name,email,subject,message,added_on) VALUES('$name','$email','$subject','$message','$added_on')";
+        $sql = "INSERT INTO career(name,email,number,position,cv,introduction,added_on) VALUES('$name','$email','$number','$position','$cv','$introduction','$added_on')";
         $res = mysqli_query($con, $sql);
 
 
@@ -50,14 +52,16 @@ if (isset($_POST['submit'])) {
     <div id='content'>
         <br>
         <div id='right'>
-           
-            <form method="POST">
-                <p>Get in Contact</p>
-                <br>
-                <input placeholder='Name' type='text' name="name">
-                <input placeholder='Email' type='email' name="email">
-                <input placeholder='Subject' type='text' name="subject">
-                <textarea placeholder='Message' rows='4' name="message"></textarea>
+
+            <form method="POST" style="border: none" enctype="multipart/form-data">
+                <label for="name">Your Name</label><input type='text' id="name" name="name">
+                <label for="email">Your Email Address</label><input type='email' id="email" name="email">
+                <label for="number">Your Mobile Number</label><input type='tel' id="number" name="number">
+                <label for="position">Position you want to apply</label><input type='text' id="position" name="position">
+                <label for="files">Upload Your CV</label><input type="file" id="files" name="cv" class="hidden" />
+
+                <label for="introduction">Your Introduction</label><textarea rows='4' id="introduction" name="introduction"></textarea>
+                <label for="">All fields are mandatory</label>
                 <input placeholder='Send' type='submit' name="submit">
             </form>
         </div>

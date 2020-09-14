@@ -140,11 +140,11 @@ a {
 
 #content #right form input,
 #content #right form textarea {
-    background: #c0c0c0;
+    background: #e0e0e0;
     padding: 8px;
     margin-bottom: 8px;
     width: 100%;
-    color: white;
+    color: rgb(109, 109, 109);
 }
 
 #content #right form input:last-of-type,
