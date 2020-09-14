@@ -1,94 +1,33 @@
 footer {
-  width: 100%;
-  display: inline-block;
-  margin: 2em 0;
-  height: 70px;
-  background-color: #ff5e06;
-}
-
-footer .copyright {
-  width: 50%;
-  float: left;
-}
-
-@media (max-width: 600px) {
-  footer .copyright {
-    width: 100%;
-  }
-}
-
-footer .copyright p {
-  padding-left: 10%;
-  color: white;
-  font-size: 0.7em;
-  line-height: 70px;
-  text-transform: capitalize;
-  letter-spacing: 1px;
-}
-
-@media (max-width: 600px) {
-  footer .copyright p {
-    text-align: center;
-    padding: 0;
-  }
-}
-
-footer .social {
-  width: 50%;
-  float: right;
-}
-
-@media (max-width: 600px) {
-  footer .social {
-    width: 100%;
-  }
-}
-
-footer .social a {
-  float: left;
-  line-height: 70px;
-  text-decoration: none;
-  color: white;
   text-align: center;
-  font-weight: bold;
-  -moz-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  -webkit-transition: all, 0.3s;
-  transition: all, 0.3s;
+  height: auto;
+  background-color: rgb(247, 247, 247);
+  width: 100%;
+  padding:4em;
 }
 
-footer .social a:hover {
-  background-color: #222;
-  -moz-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  -webkit-transition: all, 0.3s;
-  transition: all, 0.3s;
+footer h1 {
+  font-family: 'Montserrat', sans-serif !important;
+  padding: 3%;
+  font-size: 2em;
+  color: #444;
+}
+footer p{
+  padding: 1%;
+
+}
+footer .contact{
+  text-align: left;
+  margin: 3em;
 }
 
-.linked {
-  background-color: #1E83AE;
-  font-size: 1.2em;
-  width: 20%;
-}
+footer h3 {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-bottom: 18px;
 
-.face {
-  background-color: #3D5B94;
-  font-size: 1.2em;
-  width: 20%;
 }
-
-.insta {
-  background: #f09433;
-  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
-  font-size: 1.2em;
-  width: 20%;
-}
-
-.support {
-  background-color: #6dcd9a;
-  font-size: 0.8em;
-  width: 40%;
+footer ul {
+  line-height: 1.5;
 }

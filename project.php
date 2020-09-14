@@ -1,10 +1,17 @@
-<?php require('includes/header.inc.php');
+<?php
 
+// $meta_title = $row['meta_title'];
+// $meta_desc = $row['meta_desc'];
+// $meta_keywords = $row['meta_keywords'];
+
+require('includes/header.inc.php');
 
 $id = $_GET['id'];
 $sql = "SELECT * FROM projects WHERE id='$id'";
 $res = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($res);
+
+
 
 ?>
 <div id="project_details">
@@ -37,10 +44,6 @@ $row = mysqli_fetch_assoc($res);
             <p>
                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>Location:
                 <?php echo $row['location'] ?>
-            </p>
-            <p>
-                <i class="fa fa-angle-double-right" aria-hidden="true"></i>Description:
-                <?php echo $row['description'] ?>
             </p>
             <p>
                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>Area:

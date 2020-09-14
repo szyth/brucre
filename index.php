@@ -3,25 +3,19 @@
 <!-- put your content here -->
 <div>
     <ul class="cb-slideshow">
-        <li><span>Image 01</span>
-            <div>
-                <h3>ELEGANT</h3>
-            </div>
+        <li>
+            <span>Image 01</span>
         </li>
-        <li><span>Image 02</span>
-            <div>
-                <h3>QUIETUDE</h3>
-            </div>
+        <li>
+            <span>Image 02</span>
+
         </li>
-        <li><span>Image 03</span>
-            <div>
-                <h3>BALANCE</h3>
-            </div>
+        <li>
+            <span>Image 03</span>
+
         </li>
-        <li><span>Image 04</span>
-            <div>
-                <h3>EQUANIMITY</h3>
-            </div>
+        <li>
+            <span>Image 04</span>
         </li>
 
     </ul>
@@ -35,7 +29,7 @@
 <!-- DESCRIPTION BRUCRE    -->
 <div class="desc">
     <h1 class="descTitle">
-        A LUCKNOW BASED ARCHITECTURE FIRM
+        Who we are?
     </h1>
     <p class="descBody">
         We're a group of architects, designers, engineers and planners coming together to create a
@@ -55,9 +49,6 @@
 
 
 <div class="parallax-container valign-wrapper">
-    <div class="row parallax-body">
-        <h5 class="parallax-header col s12">Our in-house technical specialists create spaces that connect with the user. </h5>
-    </div>
     <div class="parallax"><img src="img/slider/4.jpg"></div>
 </div>
 
@@ -171,9 +162,6 @@
     <a href="services.php">VIEW ALL</a>
 </div>
 <div class="parallax-container valign-wrapper">
-    <div class="row parallax-body">
-        <h5 class="parallax-header col s12">Operating through a network of innovative studios across the world.</h5>
-    </div>
     <div class="parallax"><img src="img/slider/1.jpg"></div>
 </div>
 <!-- <div id="service-index">

@@ -65,9 +65,6 @@
     </div>
 </div>
 <div class="parallax-container valign-wrapper">
-    <div class="row parallax-body">
-        <h5 class="parallax-header col s12">From construction to handover and everything in between we do all and we do it fast.</h5>
-    </div>
     <div class="parallax"><img src="img/slider/1.jpg"></div>
 </div>
 <div id="service-index">

@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
 
 
 
-        $sql = "INSERT INTO contact_us(name,email,subject,message,added_on) VALUES('$name','$email','$subject','$message','$added_on')";
+        $sql = "INSERT INTO career(name,email,subject,message,added_on) VALUES('$name','$email','$subject','$message','$added_on')";
         $res = mysqli_query($con, $sql);
 
 
@@ -35,9 +35,8 @@ if (isset($_POST['submit'])) {
 
 
 ?>
-
 <div class="parallax-container valign-wrapper">
-    <div class="parallax"><img src="img/slider/2.jpg"></div>
+    <div class="parallax"><img src="img/slider/4.jpg"></div>
 </div>
 
 <div id='browser'>
@@ -45,22 +44,13 @@ if (isset($_POST['submit'])) {
         <div class='circles'></div>
         <div class='circles'></div>
         <div class='circles'></div>
-        <p>Contact Us</p>
+        <p>Career Form</p>
         <span class='arrow entypo-resize-full'></span>
     </div>
     <div id='content'>
         <br>
         <div id='right'>
-            <p>Connect</p>
-            <br>
-            <div id='social'>
-                <a href="https://www.facebook.com/Brucre-Collaboration-109421650808666/" class='social fa fa-facebook'>
-                </a>
-                <a href="https://www.linkedin.com/company/brucre" class='social fa fa-linkedin'>
-                </a>
-                <a href="https://www.instagram.com/brucre_collab/?hl=en" class='social fa fa-instagram'>
-                </a>
-            </div>
+           
             <form method="POST">
                 <p>Get in Contact</p>
                 <br>
@@ -70,11 +60,6 @@ if (isset($_POST['submit'])) {
                 <textarea placeholder='Message' rows='4' name="message"></textarea>
                 <input placeholder='Send' type='submit' name="submit">
             </form>
-            <p>other way</p>
-            <p class='other entypo-mail'>
-                <a href='#'>admin@brucre.com</a>
-            </p>
-            <p class='other entypo-phone'>(+91) 91400 59529</p>
         </div>
     </div>
 </div>

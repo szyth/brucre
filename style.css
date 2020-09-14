@@ -38,18 +38,19 @@
 }
 
 .descTitle {
-    font-size: 2.7rem;
-    margin: 10% 10% 0 10%;
+    font-size: 2.3rem;
+    margin: 2% 10%;
     line-height: 5rem;
     font-family: 'Archivo Black', sans-serif;
 }
 
 .descBody {
-    margin: 4% 10% 10% 10%;
+    margin: 1% 10% 6% 10%;
     font-size: 1.2rem;
     line-height: 1.7rem;
     font-family: 'Montserrat', sans-serif !important;
     font-weight: 100;
+    text-align: justify;
 }
 
 @media screen and (max-width: 768px) {
@@ -1189,7 +1190,7 @@
 }
 
 .card .card-content {
-    padding: 24px;
+    padding: 15px;
     border-radius: 0 0 2px 2px
 }
 
@@ -1200,7 +1201,6 @@
 .card .card-content .card-title {
     display: block;
     line-height: 32px;
-    margin-bottom: 8px;
     font-family: 'Oswald';
     text-transform: uppercase;
     font-size: 1.9em;
@@ -1386,3 +1386,7 @@
 .carousel .carousel-item:not(.active) .materialboxed {
     pointer-events: none
 }
+
+
+
+

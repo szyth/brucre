@@ -1,41 +1,36 @@
 .project-title {
-    padding: 3.5em;
+    padding: 1.3em 3.5em;
+    margin-bottom: 0.6em ;
     text-align: center;
     background-color: #f0f0f0;
 }
 
 .project-title h1 {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
     font-family: 'Montserrat', sans-serif !important;
     font-weight: 900;
     color: #5a5a5a;
 
 }
 
-.parallax-body {
-    background-color: #242424b6;
-    padding: 2%;
-}
-
-.parallax-header {
-    color: rgb(238, 238, 238);
-    font-size: 1.2em;
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 601px) and (max-width: 992px) {
     .project-title {
-        padding: 2em;
+        padding: 1em 2em;
     }
 
     .project-title h1 {
-        font-size: 2rem !important;
+        font-size: 1.7rem !important;
+    }
+}
 
+@media screen and (max-width: 601px) {
+    .project-title {
+        padding: 0.7em 1.2em;
     }
 
-    .parallax-header {
-        font-size: 0.7em;
+    .project-title h1 {
+        font-size: 1.5rem !important;
     }
-
 }
 
 .card:hover,
@@ -59,7 +54,9 @@
 .card .card-content {
     color: #444;
 }
-
+.card .card-content .card-title{
+    font-size: 1.4em;
+}
 
 .project_loadmore {
     text-align: center;
@@ -68,7 +65,7 @@
 }
 
 .project_loadmore a {
-    padding: 2%;
+    padding: 1% 2%;
     font-weight: 600;
     font-size: 0.8em;
     font-family: 'Montserrat', sans-serif !important;
@@ -137,6 +134,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .card .card-content .card-title{
+        font-size: 1.1em;
+    }
     #project_details .project-title {
         padding: 2.9em 1em;
     }
@@ -144,6 +144,7 @@
     #project_details .project-title a {
         font-size: 2.5em;
     }
+
     #carousel-container {
         padding: 1em;
     }

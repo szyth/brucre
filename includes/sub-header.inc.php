@@ -1,6 +1,4 @@
-
-
-  </main> <!-- cd-main-content -->
+</main> <!-- cd-main-content -->
 
 <nav id="cd-lateral-nav">
   <!-- <ul class="cd-navigation">
@@ -16,9 +14,9 @@
 
   </ul> -->
   <ul class="cd-navigation cd-single-item-wrapper">
-    <li><a class="current" href="index.php">Home</a></li>
-    <li><a href="services.php">Services</a></li>
-    <li><a href="all_projects.php">All Projects</a></li>
+    <li><a href="services.php">Our Services</a></li>
+    <li><a href="all_projects.php">Projects</a></li>
+    <li><a href="career.php">Career</a></li>
   </ul> <!-- cd-single-item-wrapper -->
 
   <ul class="cd-navigation cd-single-item-wrapper">
@@ -28,9 +26,9 @@
   </ul> <!-- cd-single-item-wrapper -->
 
   <div class="cd-navigation socials">
-    <a class="cd-twitter cd-img-replace" href="#0">Twitter</a>
-    <a class="cd-github cd-img-replace" href="#0">Git Hub</a>
-    <a class="cd-facebook cd-img-replace" href="#0">Facebook</a>
-    <a class="cd-google cd-img-replace" href="#0">Google Plus</a>
+    <a class="cd-twitter fa fa-facebook" href="https://www.facebook.com/Brucre-Collaboration-109421650808666/" target="_blank"></a>
+    <a class="cd-github fa fa-instagram" href="https://www.instagram.com/brucre_collab/?hl=en" target="_blank"></a>
+    <a class="cd-facebook fa fa-linkedin" href="https://www.linkedin.com/company/brucre" target="_blank"></a>
+    <!-- <a class="cd-google cd-img-replace" href="#0">Google Plus</a> -->
   </div> <!-- socials -->
 </nav>

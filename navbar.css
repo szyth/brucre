@@ -106,7 +106,7 @@ nav,
 section,
 main {
     display: block;
-    
+
 }
 
 body {
@@ -222,11 +222,7 @@ a {
     transform: translateX(-260px);
 }
 
-@media only screen and (min-width: 768px) {
-    .cd-main-content {
-        padding-top: 70px;
-    }
-}
+
 
 header {
     position: fixed;
@@ -237,8 +233,8 @@ header {
 
     /* navbar color */
     background: #3b3b3b;
-    
-    
+
+
     z-index: 3;
     /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translateZ(0);
@@ -264,11 +260,6 @@ header.is-fixed {
     position: fixed;
 }
 
-@media only screen and (min-width: 768px) {
-    header {
-        height: 70px;
-    }
-}
 
 #cd-logo {
     display: block;
@@ -284,7 +275,7 @@ header.is-fixed {
 
 @media only screen and (min-width: 768px) {
     #cd-logo {
-        margin: 22px 0 0 50px;
+        margin: 10px 0 0 50px;
         float: left;
     }
 }
@@ -292,14 +283,14 @@ header.is-fixed {
 #cd-top-nav {
     position: absolute;
     top: 0;
-    right: 120px;
+    right: 20px;
     height: 100%;
     display: none;
 }
 
 #cd-top-nav ul {
     height: 100%;
-    padding-top: 18px;
+    padding-top: 10px;
 }
 
 #cd-top-nav li {
@@ -311,8 +302,13 @@ header.is-fixed {
     display: inline-block;
     padding: .5em;
     color: #FFF;
+    font-size: 0.9em !important;
     text-transform: uppercase;
     font-weight: 600;
+}
+#cd-top-nav a:hover {
+    color: rgb(255, 206, 115);
+    transition: all ease-in 150ms;
 }
 
 #cd-top-nav a.current {
@@ -412,24 +408,9 @@ header.is-fixed {
 
 @media only screen and (min-width: 768px) {
     #cd-menu-trigger {
-        width: 110px;
-        padding-left: 1.25em;
+       display: none;
     }
 
-    #cd-menu-trigger .cd-menu-text {
-        display: inline-block;
-        line-height: 70px;
-    }
-
-    #cd-menu-trigger .cd-menu-icon {
-        left: auto;
-        right: 1.25em;
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-        transform: translateX(0);
-    }
 }
 
 #cd-lateral-nav {
@@ -556,13 +537,21 @@ header.is-fixed {
     height: 32px;
     width: 32px;
     float: left;
+    text-align: center;
     padding: 0;
-    background-image: url("../img/cd-socials.svg");
+    color: rgb(12, 12, 12);
+    /* background-image: url("img/cd-socials.svg"); */
     background-repeat: no-repeat;
     background-size: 128px 64px;
     background-color: #FFF;
     margin-right: .5em;
     border-radius: 0.25em;
+}
+
+#cd-lateral-nav .socials a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    transition: all ease-in 200ms;
 }
 
 #cd-lateral-nav .socials a.cd-twitter {

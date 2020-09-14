@@ -9,7 +9,9 @@ $image = '';
 $description = '';
 $location = '';
 $area = '';
-$meta_tags = '';
+$meta_title = '';
+$meta_desc = '';
+$meta_keyword = '';
 
 
 $msg = '';
@@ -28,7 +30,9 @@ if (isset($_GET['id']) && $_GET['id'] != '') {
         $description = $row['description'];
         $location = $row['location'];
         $area = $row['area'];
-        $meta_tags = $row['meta_tags'];
+        $meta_title = $row['meta_title'];
+        $meta_desc = $row['meta_desc'];
+        $meta_keyword = $row['meta_keyword'];
     } else {
         //header('location:product.php'); 
 ?>
@@ -44,7 +48,9 @@ if (isset($_POST['submit'])) {
     $description = get_safe_value($con, $_POST['description']);
     $location = get_safe_value($con, $_POST['location']);
     $area = get_safe_value($con, $_POST['area']);
-    $meta_tags = get_safe_value($con, $_POST['meta_tags']);
+    $meta_title = get_safe_value($con, $_POST['meta_title']);
+    $meta_desc = get_safe_value($con, $_POST['meta_desc']);
+    $meta_keyword = get_safe_value($con, $_POST['meta_keyword']);
 
     $sql = "SELECT * FROM projects WHERE name = '$name'";
     $res = mysqli_query($con, $sql);
@@ -69,14 +75,14 @@ if (isset($_POST['submit'])) {
             if ($_FILES['image']['name'] != '') {
                 $image = rand(111111111, 999999999) . '_' . $_FILES['image']['name'];
                 move_uploaded_file($_FILES['image']['tmp_name'], "../img/projects/" . $image);
-                $sql = "UPDATE projects SET name='$name',description='$description',location='$location',area='$area',meta_tags='$meta_tags',image='$image' WHERE id='$id'";
+                $sql = "UPDATE projects SET name='$name',description='$description',location='$location',area='$area',meta_title='$meta_title',meta_desc='$meta_desc',meta_keyword='$meta_keyword',image='$image' WHERE id='$id'";
             } else {
-                $sql = "UPDATE projects SET name='$name',description='$description',location='$location',area='$area',meta_tags='$meta_tags' WHERE id='$id'";
+                $sql = "UPDATE projects SET name='$name',description='$description',location='$location',area='$area',meta_title='$meta_title',meta_desc='$meta_desc',meta_keyword='$meta_keyword' WHERE id='$id'";
             }
         } else {
             $image = rand(111111111, 999999999) . '_' . $_FILES['image']['name'];
             move_uploaded_file($_FILES['image']['tmp_name'], "../img/projects/" . $image);
-            $sql = "INSERT INTO projects(name,description,location,area,meta_tags,status,image) VALUES ('$name','$description','$location','$area','$meta_tags','1','$image')";
+            $sql = "INSERT INTO projects(name,description,location,area,meta_title,meta_desc,meta_keyword,status,image) VALUES ('$name','$description','$location','$area','$meta_title','$meta_desc','$meta_keyword','1','$image')";
         }
         mysqli_query($con, $sql);
         header('location:projects.php');
@@ -113,8 +119,16 @@ if (isset($_POST['submit'])) {
                                 <textarea name="area" placeholder="Please enter area" class="form-control" required><?php echo $area ?></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="meta_tags" class="form-control-label">Meta Tags</label>
-                                <textarea name="meta_tags" placeholder="Please enter Meta Tags separated by comma" class="form-control"><?php echo $meta_tags ?></textarea>
+                                <label for="meta_title" class="form-control-label">Meta Title</label>
+                                <textarea name="meta_title" placeholder="Please enter Meta Title" class="form-control"><?php echo $meta_title ?></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="meta_desc" class="form-control-label">Meta Description</label>
+                                <textarea name="meta_desc" placeholder="Please enter Meta Description" class="form-control"><?php echo $meta_desc ?></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="meta_keyword" class="form-control-label">Meta Keyword</label>
+                                <textarea name="meta_keyword" placeholder="Please enter around 10 Meta Keywords separated by commas " class="form-control"><?php echo $meta_keyword ?></textarea>
                             </div>
 
                             <button type="submit" name="submit" class="btn btn-lg btn-info btn-block">
