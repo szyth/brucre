@@ -11,7 +11,7 @@ $sql = "SELECT * FROM projects WHERE id='$id'";
 $res = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($res);
 
-
+$img = mysqli_fetch_assoc(mysqli_query($con, " SELECT * FROM images WHERE status='1' AND p_name = '" . $row['name'] . "'"))
 
 ?>
 <div id="project_details">
@@ -26,7 +26,7 @@ $row = mysqli_fetch_assoc($res);
 
     <!-- parallax -->
     <div class="parallax-container valign-wrapper">
-        <div class="parallax"><img src="img/projects/<?php echo $row['image'] ?>"></div>
+        <div class="parallax"><img src="img/projects/<?php echo $img['file_name'] ?>"></div>
     </div>
     <div class="row">
         <div class="col s12 l8 overview">
@@ -54,15 +54,24 @@ $row = mysqli_fetch_assoc($res);
 
 </div>
 
-<div id="carousel-container">
+<!-- <div id="carousel-container">
     <div class="carousel carousel-slider">
         <?php
-        $res = mysqli_query($con, " SELECT * FROM projects WHERE status='1'");
-        while ($row = mysqli_fetch_assoc($res)) {
+        $res = mysqli_query($con, " SELECT * FROM images WHERE status='1' AND p_name = '" . $row['name'] . "'");
+        while ($img = mysqli_fetch_assoc($res)) {
         ?>
-            <a class="carousel-item"><img src="img/projects/<?php echo $row['image'] ?>"></a>
+            <a class="carousel-item"><img src="img/projects/<?php echo $img['file_name'] ?>"></a>
         <?php } ?>
     </div>
+</div> -->
+<div class="owl-carousel">
+    <?php
+    $res = mysqli_query($con, " SELECT * FROM images WHERE status='1' AND p_name = '" . $row['name'] . "'");
+    while ($img = mysqli_fetch_assoc($res)) {
+    ?>
+        <div><img src="img/projects/<?php echo $img['file_name'] ?>"></div>
+    <?php } ?>
+
 </div>
 
 

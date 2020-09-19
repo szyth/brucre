@@ -67,26 +67,61 @@ if (isset($_POST['submit'])) {
             $msg = "Product already exists!";
         }
     }
-    if ($_FILES['image']['type'] != $image && $_FILES['image']['type'] != 'image/png' && $_FILES['image']['type'] != 'image/jpg' && $_FILES['image']['type'] != 'image/jpeg') {
-        $msg = "Please select only PNG,JPG or JPEG image format";
-    }
-    if ($msg == '') {
-        if (isset($_GET['id']) && $_GET['id'] != '') {
-            if ($_FILES['image']['name'] != '') {
-                $image = rand(111111111, 999999999) . '_' . $_FILES['image']['name'];
-                move_uploaded_file($_FILES['image']['tmp_name'], "../img/projects/" . $image);
-                $sql = "UPDATE projects SET name='$name',description='$description',location='$location',area='$area',meta_title='$meta_title',meta_desc='$meta_desc',meta_keyword='$meta_keyword',image='$image' WHERE id='$id'";
-            } else {
-                $sql = "UPDATE projects SET name='$name',description='$description',location='$location',area='$area',meta_title='$meta_title',meta_desc='$meta_desc',meta_keyword='$meta_keyword' WHERE id='$id'";
+    if ($msg == '') { // File upload configuration 
+        $targetDir = "../img/projects/";
+        $allowTypes = array('jpg', 'png', 'jpeg', 'gif');
+
+        $statusMsg = $errorMsg = $insertValuesSQL = $errorUpload = $errorUploadType = '';
+        $fileNames = array_filter($_FILES['image']['name']);
+
+        if (!empty($fileNames)) {
+            foreach ($_FILES['image']['name'] as $key => $val) {
+                // File upload path 
+                $fileName = basename($_FILES['image']['name'][$key]);
+                $targetFilePath = $targetDir . $fileName;
+
+                // Check whether file type is valid 
+                $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+                if (in_array($fileType, $allowTypes)) {
+                    // Upload file to server 
+                    if (move_uploaded_file($_FILES["image"]["tmp_name"][$key], $targetFilePath)) {
+                        // Image db insert sql 
+                        $insertValuesSQL .= "('" . $name . "','" . $fileName . "', NOW()),";
+                    } else {
+                        $errorUpload .= $_FILES['image']['name'][$key] . ' | ';
+                    }
+                } else {
+                    $errorUploadType .= $_FILES['image']['name'][$key] . ' | ';
+                }
+            }
+            if (!empty($insertValuesSQL)) {
+                $insertValuesSQL = trim($insertValuesSQL, ',');
+                // Insert image file name into database 
+
+
+                //image array upload
+                $insert = mysqli_query($con, "INSERT INTO images (p_name,file_name, uploaded_on) VALUES $insertValuesSQL");
+
+
+                if ($insert) {
+                    $errorUpload = !empty($errorUpload) ? 'Upload Error: ' . trim($errorUpload, ' | ') : '';
+                    $errorUploadType = !empty($errorUploadType) ? 'File Type Error: ' . trim($errorUploadType, ' | ') : '';
+                    $errorMsg = !empty($errorUpload) ? '<br/>' . $errorUpload . '<br/>' . $errorUploadType : '<br/>' . $errorUploadType;
+                    //project upload
+                    mysqli_query($con, "INSERT INTO projects(name,description,location,area,meta_title,meta_desc,meta_keyword,status) VALUES ('$name','$description','$location','$area','$meta_title','$meta_desc','$meta_keyword','1')");
+                    $statusMsg = "Files are uploaded successfully." . $errorMsg;
+                    header('location:projects.php');
+                    die();
+                } else {
+                    $statusMsg = "Sorry, there was an error uploading your file.";
+                }
             }
         } else {
-            $image = rand(111111111, 999999999) . '_' . $_FILES['image']['name'];
-            move_uploaded_file($_FILES['image']['tmp_name'], "../img/projects/" . $image);
-            $sql = "INSERT INTO projects(name,description,location,area,meta_title,meta_desc,meta_keyword,status,image) VALUES ('$name','$description','$location','$area','$meta_title','$meta_desc','$meta_keyword','1','$image')";
+            $statusMsg = 'Please select a file to upload.';
         }
-        mysqli_query($con, $sql);
-        header('location:projects.php');
-        die();
+
+        // Display status message 
+        echo $statusMsg;
     }
 }
 ?>
@@ -95,7 +130,7 @@ if (isset($_POST['submit'])) {
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
-                    <div class="card-header"><strong>Product</strong><small> Form</small></div>
+                    <div class="card-header"><strong>Project</strong><small> Form</small></div>
                     <form action="" method="post" enctype="multipart/form-data">
                         <div class="card-body card-block">
                             <div class="form-group">
@@ -104,7 +139,7 @@ if (isset($_POST['submit'])) {
                             </div>
                             <div class="form-group">
                                 <label for="image" class="form-control-label">Image</label>
-                                <input type="file" name="image" class="form-control" <?php echo $image_required ?>>
+                                <input type="file" name="image[]" multiple class="form-control" <?php echo $image_required ?>>
                             </div>
                             <div class="form-group">
                                 <label for="description" class="form-control-label">Description</label>

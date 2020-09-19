@@ -64,6 +64,8 @@
 
     $res = mysqli_query($con, " SELECT * FROM projects  WHERE status='1'");
     while ($row = mysqli_fetch_assoc($res)) {
+        $img = mysqli_fetch_assoc(mysqli_query($con, " SELECT * FROM images WHERE status='1' AND p_name = '" . $row['name'] . "'"))
+
 
 
     ?>
@@ -71,7 +73,7 @@
             <a href="project.php?id=<?php echo $row['id'] ?>">
                 <div class="card">
                     <div class="card-image">
-                        <img src="img/projects/<?php echo $row['image'] ?>" />
+                        <img src="img/projects/<?php echo $img['file_name'] ?>" />
                     </div>
                     <div class="card-content">
                         <span class="card-title"><?php echo $row['name'] ?></span>

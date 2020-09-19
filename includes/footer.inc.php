@@ -20,7 +20,7 @@
       the local level.</p>
 
     <div class="row">
-      <div class="col s12 m3 offset-m2">
+      <div class="col s12 m3 offset-m1">
         <div class="contact">
           <h3>Contact</h3>
           <ul>
@@ -46,6 +46,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="materialize.js"></script>
   <script src="init.js"></script>
+  <script src="owl.carousel.min.js"></script>
   <script></script>
   </body>
 

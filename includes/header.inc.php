@@ -56,14 +56,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
   <!-- <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" /> -->
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <link rel="stylesheet" type="text/css" href="contact.css" />
-  <link rel="stylesheet" type="text/css" href="aboutUs.css" />
-  <link rel="stylesheet" type="text/css" href="slider.css" />
-  <link rel="stylesheet" type="text/css" href="projects.css" />
-  <link rel="stylesheet" type="text/css" href="footer.css" />
-  <link rel="stylesheet" type="text/css" href="navbar.css" />
-  <link rel="stylesheet" type="text/css" href="services.css" />
-
+  <link rel="stylesheet" href="owl.carousel.min.css">
+  <link rel="stylesheet" href="owl.theme.default.min.css">
 </head>
 
 <body>

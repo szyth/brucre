@@ -107,6 +107,19 @@ $(".carousel.carousel-slider").carousel({
 });
 autoplay();
 function autoplay() {
-    $('.carousel').carousel('next');
-    setTimeout(autoplay, 3000);
+  $(".carousel").carousel("next");
+  setTimeout(autoplay, 3000);
 }
+
+$(document).ready(function () {
+  $(".owl-carousel").owlCarousel({
+    items: 1.2,
+    loop: true,
+    margin: 10,
+    responsiveClass: true,
+    autoHeight: true,
+    autoplay: true,
+    autoplayTimeout: 2500,
+    autoplayHoverPause: true,
+  });
+});

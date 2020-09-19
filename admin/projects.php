@@ -22,8 +22,9 @@ if (isset($_GET['type']) && $_GET['type'] != '') {
     }
     if ($type == "delete") {
         $id = get_safe_value($con, $_GET['id']);
-        $sql_delete_status = "DELETE FROM projects WHERE id='$id'";
-        mysqli_query($con, $sql_delete_status);
+        $name = get_safe_value($con, $_GET['name']);
+        mysqli_query($con, "DELETE FROM projects WHERE id='$id'");
+        mysqli_query($con,"DELETE FROM images WHERE p_name='$name'");
     }
 }
 
@@ -64,7 +65,12 @@ $res = mysqli_query($con, $sql);
                                         <tr>
                                             <td class="serial"><?php echo $i++ ?></td>
                                             <td><?php echo $row['name'] ?></td>
-                                            <td><img src="<?php echo "../img/projects/".$row['image'] ?>"/></td>
+                                            <?php
+                                            
+                                            $img = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM images WHERE p_name = '" . $row['name'] . "'"));
+                                            ?>
+                                            <td><img src="<?php echo "../img/projects/" . $img['file_name'] ?>" /></td>
+
                                             <td><?php echo $row['description'] ?></td>
                                             <td><?php echo $row['location'] ?></td>
                                             <td><?php echo $row['area'] ?></td>
@@ -75,9 +81,8 @@ $res = mysqli_query($con, $sql);
                                                 } else {
                                                     echo " <a href='?type=status&operation=active&id=" . $row['id'] . "'><span class='badge badge-pending'>Deactive</span></a>&nbsp;";
                                                 }
-                                                echo "<a href='manage_project.php?id=" . $row['id'] . "'><span class='badge badge-primary'>Edit</span></a>&nbsp;&nbsp;";
 
-                                                echo "<a href='?type=delete&id=" . $row['id'] . "'><span class='badge badge-danger'>Delete</span></a>";
+                                                echo "<a href='?type=delete&id=" . $row['id'] . "&name=" . $row['name'] . "'><span class='badge badge-danger'>Delete</span></a>";
                                                 ?>
                                             </td>
                                         </tr>
