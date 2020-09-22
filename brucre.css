@@ -2514,6 +2514,7 @@ img {
 #project_details .overview p {
     padding: 5%;
     padding-top: 0;
+    line-height:1.5;
 }
 
 
