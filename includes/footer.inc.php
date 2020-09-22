@@ -34,7 +34,7 @@
         </div>
 
       </div>
-      <div class="col s12 m7" style=" padding: 1em 3em;">
+      <div class="col s12 m7 map">
         <div style="width: 100%"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=80%25&amp;height=300&amp;hl=en&amp;q=Sardar%20Nagar,%20Balaganj,%20Lucknow,%20Uttar%20Pradesh,%20India.%20+(brucre)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.maps.ie/route-planner.htm">Plan A Journey</a></div>
       </div>
     </div>
@@ -45,7 +45,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="materialize.js"></script>
-  <script src="init.js"></script>
+  <script src="brucre.js"></script>
   <script src="owl.carousel.min.js"></script>
   <script></script>
   </body>

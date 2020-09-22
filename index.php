@@ -64,7 +64,7 @@
 
     $res = mysqli_query($con, " SELECT * FROM projects  WHERE status='1'");
     while ($row = mysqli_fetch_assoc($res)) {
-        $img = mysqli_fetch_assoc(mysqli_query($con, " SELECT * FROM images WHERE status='1' AND p_name = '" . $row['name'] . "'"))
+        $img = mysqli_fetch_assoc(mysqli_query($con, " SELECT * FROM images WHERE status='1' AND p_id = '" . $row['id'] . "'"))
 
 
 

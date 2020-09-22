@@ -22,9 +22,12 @@ if (isset($_GET['type']) && $_GET['type'] != '') {
     }
     if ($type == "delete") {
         $id = get_safe_value($con, $_GET['id']);
-        $name = get_safe_value($con, $_GET['name']);
         mysqli_query($con, "DELETE FROM projects WHERE id='$id'");
-        mysqli_query($con,"DELETE FROM images WHERE p_name='$name'");
+        $res = mysqli_query($con, "SELECT * FROM images WHERE p_id='$id'");
+        while ($row = mysqli_fetch_assoc($res)) {
+            unlink("../img/projects/" . $row['file_name']);
+        }
+        mysqli_query($con, "DELETE FROM images WHERE p_id='$id'");
     }
 }
 
@@ -66,8 +69,8 @@ $res = mysqli_query($con, $sql);
                                             <td class="serial"><?php echo $i++ ?></td>
                                             <td><?php echo $row['name'] ?></td>
                                             <?php
-                                            
-                                            $img = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM images WHERE p_name = '" . $row['name'] . "'"));
+
+                                            $img = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM images WHERE p_id = '" . $row['id'] . "'"));
                                             ?>
                                             <td><img src="<?php echo "../img/projects/" . $img['file_name'] ?>" /></td>
 
@@ -82,7 +85,7 @@ $res = mysqli_query($con, $sql);
                                                     echo " <a href='?type=status&operation=active&id=" . $row['id'] . "'><span class='badge badge-pending'>Deactive</span></a>&nbsp;";
                                                 }
 
-                                                echo "<a href='?type=delete&id=" . $row['id'] . "&name=" . $row['name'] . "'><span class='badge badge-danger'>Delete</span></a>";
+                                                echo "<a href='?type=delete&id=" . $row['id'] . "'><span class='badge badge-danger'>Delete</span></a>";
                                                 ?>
                                             </td>
                                         </tr>

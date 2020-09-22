@@ -113,7 +113,7 @@ function autoplay() {
 
 $(document).ready(function () {
   $(".owl-carousel").owlCarousel({
-    items: 1.2,
+    items: 1,
     loop: true,
     margin: 10,
     responsiveClass: true,

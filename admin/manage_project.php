@@ -86,7 +86,7 @@ if (isset($_POST['submit'])) {
                     // Upload file to server 
                     if (move_uploaded_file($_FILES["image"]["tmp_name"][$key], $targetFilePath)) {
                         // Image db insert sql 
-                        $insertValuesSQL .= "('" . $name . "','" . $fileName . "', NOW()),";
+                        $insertValuesSQL .= "(LAST_INSERT_ID(),'" . $fileName . "', NOW()),";
                     } else {
                         $errorUpload .= $_FILES['image']['name'][$key] . ' | ';
                     }
@@ -98,17 +98,17 @@ if (isset($_POST['submit'])) {
                 $insertValuesSQL = trim($insertValuesSQL, ',');
                 // Insert image file name into database 
 
+                //project upload
+                mysqli_query($con, "INSERT INTO projects(name,description,location,area,meta_title,meta_desc,meta_keyword,status) VALUES ('$name','$description','$location','$area','$meta_title','$meta_desc','$meta_keyword','1')");
 
                 //image array upload
-                $insert = mysqli_query($con, "INSERT INTO images (p_name,file_name, uploaded_on) VALUES $insertValuesSQL");
+                $insert = mysqli_query($con, "INSERT INTO images (p_id,file_name, uploaded_on) VALUES $insertValuesSQL");
 
 
                 if ($insert) {
                     $errorUpload = !empty($errorUpload) ? 'Upload Error: ' . trim($errorUpload, ' | ') : '';
                     $errorUploadType = !empty($errorUploadType) ? 'File Type Error: ' . trim($errorUploadType, ' | ') : '';
                     $errorMsg = !empty($errorUpload) ? '<br/>' . $errorUpload . '<br/>' . $errorUploadType : '<br/>' . $errorUploadType;
-                    //project upload
-                    mysqli_query($con, "INSERT INTO projects(name,description,location,area,meta_title,meta_desc,meta_keyword,status) VALUES ('$name','$description','$location','$area','$meta_title','$meta_desc','$meta_keyword','1')");
                     $statusMsg = "Files are uploaded successfully." . $errorMsg;
                     header('location:projects.php');
                     die();

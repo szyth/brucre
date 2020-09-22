@@ -7,12 +7,16 @@
 require('includes/header.inc.php');
 
 $id = $_GET['id'];
-$sql = "SELECT * FROM projects WHERE id='$id'";
-$res = mysqli_query($con, $sql);
-$row = mysqli_fetch_assoc($res);
+if ($id > 0) {
+    $sql = "SELECT * FROM projects WHERE id='$id'";
+    $res = mysqli_query($con, $sql);
+    $row = mysqli_fetch_assoc($res);
 
-$img = mysqli_fetch_assoc(mysqli_query($con, " SELECT * FROM images WHERE status='1' AND p_name = '" . $row['name'] . "'"))
-
+    $img = mysqli_fetch_assoc(mysqli_query($con, " SELECT * FROM images WHERE status='1' AND p_id = '$id'"));
+} else {
+    header('location:index.php');
+    die();
+}
 ?>
 <div id="project_details">
     <div class="project-title">
@@ -66,7 +70,7 @@ $img = mysqli_fetch_assoc(mysqli_query($con, " SELECT * FROM images WHERE status
 </div> -->
 <div class="owl-carousel">
     <?php
-    $res = mysqli_query($con, " SELECT * FROM images WHERE status='1' AND p_name = '" . $row['name'] . "'");
+    $res = mysqli_query($con, " SELECT * FROM images WHERE status='1' AND p_id = '$id'");
     while ($img = mysqli_fetch_assoc($res)) {
     ?>
         <div><img src="img/projects/<?php echo $img['file_name'] ?>"></div>
